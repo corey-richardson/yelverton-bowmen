@@ -1,31 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
+<style>
+    #records table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    
+    #records table {
+        width: 100%;
+    }
+    
+    #records th, td {
+        width: 20%;
+        text-align: center;
+    }
+</style>
+
 <div id="records">
-    <table>
-        <tr>
-            <th colspan="5">Compound</th>
-        </tr>
-        <tr>
-            <th rowspan="2">Round</th>
-            <th colspan="2">Gents</th>
-            <th colspan="2">Ladies</th>
-        </tr>
-        <tr>
-            <th>Name</th>
-            <th>Score</th>
-            <th>Name</th>
-            <th>Score</th>
-        </tr>
-        {% for round_name, record_data in compound.items() %}
-        <tr>
-            <td>{{ round_name }}</td>
-            {% for i in range(0,3) %}
-            <td>{{ record_data[i] }}</td>
+
+    {% for bowtype_label, bowtype in bowtypes.items() %}
+    <div id="{{ bowtype_label | lower }}">
+        <table>
+            <tr>
+                <th colspan="5">{{ bowtype_label }}</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Round</th>
+                <th colspan="2">Gents</th>
+                <th colspan="2">Ladies</th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+            {% for round_name, record_data in bowtype.items() %}
+            <tr>
+                <td>{{ round_name }}</td>
+                {% for i in range(0,3) %}
+                <td>{{ record_data[i] }}</td>
+                {% endfor %}
+            </tr>
             {% endfor %}
-        </tr>
-        {% endfor %}
-    </table>
+        </table>
+    </div>
+    <br>
+    {% endfor %}
 
 </div>
 
