@@ -1,4 +1,5 @@
 bowtype = {
+        "Imperial" : ["-","-","-","-"] ,
         "180yd Clout" : [" ", " ", " ", " "] , 
         "180yd Clout (Double)" : [" ", " ", " ", " "] , 
         "Albion" : [" ", " ", " ", " "] , 
@@ -7,7 +8,9 @@ bowtype = {
         "Bray I" : [" ", " ", " ", " "] , 
         "Bray I (Three Spot)" : [" ", " ", " ", " "] , 
         "Bray II" : [" ", " ", " ", " "] , 
-        "Bray II (Three Spot)" : [" ", " ", " ", " "] , 
+        "Bray II (Three Spot)" : [" ", " ", " ", " "] ,
+        "Bray Combined" : [" ", " ", " ", " "] , 
+        "Bray Combined (Three Spot)" : [" ", " ", " ", " "] ,
         "Bristol II" : [" ", " ", " ", " "] , 
         "Bristol II (Double)" : [" ", " ", " ", " "] , 
         "Bristol III" : [" ", " ", " ", " "] , 
@@ -53,6 +56,7 @@ bowtype = {
         "York" : [" ", " ", " ", " "] , 
         "York (Double)" : [" ", " ", " ", " "] , 
         
+        "Imperial" : ["-","-","-","-"] ,
         "185m Clout" : [" ", " ", " ", " "] , 
         "185m Clout (Double)" : [" ", " ", " ", " "] , 
         "Frostbite" : [" ", " ", " ", " "] , 
