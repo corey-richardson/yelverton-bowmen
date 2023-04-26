@@ -16,14 +16,17 @@
         <span><a href="#">Join Us</a></span>
     
         <div id="subnav">
-            <span><a href="#welcome">Welcome</a></span>
-            <span><a href="#beginners">Beginners</a></span>
-            <span><a href="#useful-links">Useful Links</a></span>
+            {% for category in subnav_bar %}
+            <span><a href="#{{ category.lower().replace(' ','-') }}">{{ category }}</a></span>
+            {% endfor %}
+
         </div>
     </nav>
 
+    <div id="main">
     {% block content %}
     {% endblock %}
+    </div>
 
     <footer>
         <p>

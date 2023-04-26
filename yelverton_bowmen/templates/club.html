@@ -1,29 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div id="main"></div>
-
-    <div id="committee">
-        <h2>Committee</h2>
-        <p>The Yelverton Bowmen committee is elected each year at the AGM. The current committee is listed below.</p>
-        
-        {% for name, role_info in committee_members.items() %}
-        <div class="committee-member">
-            <table>
-                <tr>
-                    <td>
-                        <img src="{{role_info[1]}}" />
-                    </td>
-                    <td>
-                    <h3>{{ role_info[0] }}</h3>
-                    <p><i>{{ name }}</i></p>
-                    <p>{{ role_info[2] }}</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        {% endfor %}
+<div id="committee">
+    <h2>Committee</h2>
+    <p>The Yelverton Bowmen committee is elected each year at the AGM. The current committee is listed below.</p>
+    
+    {% for name, role_info in committee_members.items() %}
+    <div class="committee-member">
+        <table>
+            <tr>
+                <td>
+                    <img src="{{role_info[1]}}" />
+                </td>
+                <td>
+                <h3>{{ role_info[0] }}</h3>
+                <p><i>{{ name }}</i></p>
+                <p>{{ role_info[2] }}</p>
+                </td>
+            </tr>
+        </table>
     </div>
-
+    {% endfor %}
 </div>
+
 {% endblock %}
