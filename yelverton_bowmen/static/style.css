@@ -117,3 +117,17 @@ footer a {
     color: var(--yb_light_blue);
     border-radius: 15px;
 }
+
+#records table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+#records table {
+    width: 100%;
+}
+
+#records th, td {
+    width: 20%;
+    text-align: center;
+}
