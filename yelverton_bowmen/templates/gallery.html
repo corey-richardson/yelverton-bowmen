@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+
+    div.gallery-container {
+        padding-bottom: 10px;
+    }
+
+    div.gallery {
+      margin: 5px;
+      float: left;
+      width: 49%;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+</style>
+
+<div id="gallery-container">
+
+    <h1>Gallery</h1>
+
+    {% for image in scandir(directory) %}
+    <div class="gallery">
+        <a target="_blank" href="{{ image.path }}">
+        <img src="{{ image.path }}" width="600" height="400">
+        </a>
+    </div>
+    {% endfor %}
+    <h3><center>---</center></h3> <!-- needed to solve footer overlapping images -->
+</div>
+
+{% endblock %}

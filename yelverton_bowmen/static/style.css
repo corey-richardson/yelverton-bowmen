@@ -50,7 +50,6 @@ nav img {
 
 #subnav span a {
     color: white;
-    font-size: small;
     padding: 0px 20px;
     border-radius: 15px;
     margin-bottom: 20px;
@@ -88,10 +87,6 @@ li {
     padding: 0 10px;
 }
 
-#policies a {
-    color: var(--yb_blue);
-}
-
 #useful-links a:hover, #policies a:hover {
     color: var(--yb_dark_blue);
 }
@@ -118,3 +113,13 @@ footer a {
     border-radius: 15px;
 }
 
+#club-records a {
+    color: var(--yb_blue);
+    padding: 0 10px;
+    border-radius: 15px;
+}
+
+#club-records a:hover {
+    color: var(--yb_blue);
+    background-color: var(--yb_dark_blue);
+}

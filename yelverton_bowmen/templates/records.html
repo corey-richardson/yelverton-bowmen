@@ -2,22 +2,33 @@
 {% block content %}
 
 <style>
-    #records table, th, td {
+    #club-records table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
       }
     
-    #records table {
+    #club-records table {
         width: 100%;
     }
     
-    #records th, td {
+    #club-records th, td {
         width: 20%;
         text-align: center;
     }
 </style>
 
-<div id="records">
+<div id="club-records">
+
+    <h1>Club Records</h1>
+    <center>
+        <a href="#barebow">Barebow</a>
+        <a href="#recurve">Recurve</a>
+        <a href="#compound">Compound</a>
+        <a href="#longbow">Longbow</a>
+        <a href="#afb">American Flatbow</a>
+    </center>
+    <p>The tables below display the club records. Use the links above to navigate.</p>
+
 
     {% for bowtype_label, bowtype in bowtypes.items() %}
     <div id="{{ bowtype_label | lower }}">
@@ -49,6 +60,22 @@
     <br>
     {% endfor %}
 
+</div>
+
+<div id="rounds-and-classifications">
+    <h1>Rounds and Classifications</h1>
+</div>
+
+<div id="252-scheme">
+    <h1>252 Scheme</h1>
+</div>
+
+<div id="frostbite-postal">
+    <h1>Frostbite Postal</h1>
+</div>
+
+<div id="portsmouth-postal">
+    <h1>Portsmouth Postal</h1>
 </div>
 
 {% endblock %}
