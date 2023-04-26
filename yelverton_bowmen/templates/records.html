@@ -2,7 +2,7 @@
 {% block content %}
 
 <style>
-    #club-records table, th, td {
+    #club-records table, th, td, tr {
         border: 1px solid black;
         border-collapse: collapse;
       }
@@ -15,19 +15,23 @@
         width: 20%;
         text-align: center;
     }
+
+    #club-records tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 </style>
 
 <div id="club-records">
 
-    <h1>Club Records</h1>
-    <center>
-        <a href="#barebow">Barebow</a>
-        <a href="#recurve">Recurve</a>
-        <a href="#compound">Compound</a>
-        <a href="#longbow">Longbow</a>
-        <a href="#afb">American Flatbow</a>
-    </center>
-    <p>The tables below display the club records. Use the links above to navigate.</p>
+    <h2>Club Records</h2>
+
+    <p>The tables below display the club records. Use the links to navigate bowstyles.</p>
+    <a href="#barebow">Barebow</a>
+    <a href="#recurve">Recurve</a>
+    <a href="#compound">Compound</a>
+    <a href="#longbow">Longbow</a>
+    <a href="#afb">American Flatbow</a> <br><br>
+
 
 
     {% for bowtype_label, bowtype in bowtypes.items() %}
@@ -50,7 +54,7 @@
             {% for round_name, record_data in bowtype.items() %}
             <tr>
                 <td>{{ round_name }}</td>
-                {% for i in range(0,3) %}
+                {% for i in range(0,4) %}
                 <td>{{ record_data[i] }}</td>
                 {% endfor %}
             </tr>
@@ -63,19 +67,19 @@
 </div>
 
 <div id="rounds-and-classifications">
-    <h1>Rounds and Classifications</h1>
+    <h2>Rounds and Classifications</h2>
 </div>
 
 <div id="252-scheme">
-    <h1>252 Scheme</h1>
+    <h2>252 Scheme</h2>
 </div>
 
 <div id="frostbite-postal">
-    <h1>Frostbite Postal</h1>
+    <h2>Frostbite Postal</h2>
 </div>
 
 <div id="portsmouth-postal">
-    <h1>Portsmouth Postal</h1>
+    <h2>Portsmouth Postal</h2>
 </div>
 
 {% endblock %}
