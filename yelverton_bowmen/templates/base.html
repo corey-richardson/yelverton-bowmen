@@ -6,10 +6,10 @@
   </head>
   <body>
     <nav>
-        <img src="/yelverton_bowmen/imgs/logo.png" />
+        <img src="../static/imgs/logo.png" />
         <br>
-        <span><a href="index.html">Home</a></span>
-        <span><a href="club.html">Club</a></span>
+        <span><a href="{{ url_for('index') }}">Home</a></span>
+        <span><a href="{{ url_for('club') }}">Club</a></span>
         <span><a href="#">Records Room</a></span>
         <span><a href="#">News</a></span>
         <span><a href="#">Gallery</a></span>
@@ -21,13 +21,6 @@
             <span><a href="#useful-links">Useful Links</a></span>
         </div>
     </nav>
-
-    <div id="banner">
-        <div class="content">
-            <img src="/yelverton_bowmen/imgs/widewell_droneshot.jpg" />
-            <h1>Yelverton Bowmen</h1>
-          </div>
-    </div>
 
     {% block content %}
     {% endblock %}

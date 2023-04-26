@@ -62,26 +62,6 @@ nav img {
     padding: 0px 20px;
 }
 
-#banner {
-    background-image: url(imgs/widewell_droneshot.jpg);
-    background-size: cover;
-    background-position: bottom center;
-    height: 500px;
-    width: 100%;
-    opacity: 0.75;
-    margin: 0;
-}
-
-#banner .content h1 {
-    color: white;
-    border: 3px solid white;
-    border-radius: 15px;
-    position: relative;
-    top: 150px;
-    width: 400px;
-    margin: 0 auto;
-  }
-
 #main {
     margin: 20px;
 }
