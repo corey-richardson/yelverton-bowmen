@@ -1,68 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-<style>
-    #club-records table, th, td, tr {
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
-    
-    #club-records table {
-        width: 100%;
-    }
-    
-    #club-records th, td {
-        width: 20%;
-        text-align: center;
-    }
-
-    #club-records tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-</style>
-
 <div id="club-records">
+    
+    <div id="record-text" >
 
-    <h2>Club Records</h2>
+        <h2>Club Records</h2>
 
-    <p>The tables below display the club records. Use the links to navigate bowstyles.</p>
-    <a href="#barebow">Barebow</a>
-    <a href="#recurve">Recurve</a>
-    <a href="#compound">Compound</a>
-    <a href="#longbow">Longbow</a>
-    <a href="#afb">American Flatbow</a> <br><br>
+        <p>The buttons below link to tables containing the Yelverton Bowmen Club Records for their respective bowstyle.</p>
+        <a href="/records/afb">American Flatbow</a>
+        <a href="/records/barebow">Barebow</a>
+        <a href="/records/compound">Compound</a>
+        <a href="/records/longbow">Longbow</a>
+        <a href="/records/recurve">Recurve</a> <br><br>
 
-
-
-    {% for bowtype_label, bowtype in bowtypes.items() %}
-    <div id="{{ bowtype_label | lower }}">
-        <table>
-            <tr>
-                <th colspan="5">{{ bowtype_label }}</th>
-            </tr>
-            <tr>
-                <th rowspan="2">Round</th>
-                <th colspan="2">Gents</th>
-                <th colspan="2">Ladies</th>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <th>Score</th>
-                <th>Name</th>
-                <th>Score</th>
-            </tr>
-            {% for round_name, record_data in bowtype.items() %}
-            <tr>
-                <td>{{ round_name }}</td>
-                {% for i in range(0,4) %}
-                <td>{{ record_data[i] }}</td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </table>
     </div>
-    <br>
-    {% endfor %}
 
 </div>
 

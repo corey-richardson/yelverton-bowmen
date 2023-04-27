@@ -1,4 +1,4 @@
-barebow = {
+barebow =  ["Barebow", {
     "Imperial" : ["-","-","-","-"] ,
     "180yd Clout": [" ", " ", " ", " "],
     "180yd Clout (Double)": [" ", " ", " ", " "],
@@ -108,4 +108,4 @@ barebow = {
     "WA1440": ["Richard Burridge", "1047", " ", " "],
     "WA1440 (Double)": [" ", " ", " ", " "]
 
-}
+} ]

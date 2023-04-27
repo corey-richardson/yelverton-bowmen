@@ -46,13 +46,35 @@ def club():
 @app.route('/records', methods = ["GET","POST"])    
 def records():
     return render_template("records.html",
-                           subnav_bar=records_subnav,
-                           bowtypes=bowtypes,
-                           barebow=barebow,
-                           recurve=recurve,
-                           compound=compound,
-                           longbow=longbow,
-                           afb=afb)
+                           subnav_bar=records_subnav)
+    
+# bowtypes=bowtypes,
+# barebow=barebow,
+# recurve=recurve,
+# compound=compound,
+# longbow=longbow,
+# afb=afb
+
+@app.route('/records/<bowtype>')
+def bowtype_record(bowtype):
+    match bowtype:
+        case "afb":
+            bowtype=afb
+        case "barebow":
+            bowtype=barebow
+        case "compound":
+            bowtype=compound
+        case "longbow":
+            bowtype=longbow
+        case "recurve":
+            bowtype=recurve
+        case _:
+            bowtype=barebow
+    return render_template("bowtype_record.html",
+                           # subnav_bar = ["AFB", "Barebow", "Compound", "Longbow", "Recurve"],
+                           bowtype=bowtype)
+
+
     
 @app.route('/gallery', methods = ["GET","POST"]) 
 def gallery():

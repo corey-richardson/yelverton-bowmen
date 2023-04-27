@@ -113,13 +113,14 @@ footer a {
     border-radius: 15px;
 }
 
-#club-records a {
-    color: var(--yb_blue);
+#record-text a {
+    color: white;
+    background-color: var(--yb_blue);
     padding: 0 10px;
     border-radius: 15px;
 }
 
-#club-records a:hover {
+#record-text a:hover {
     color: var(--yb_blue);
     background-color: var(--yb_dark_blue);
 }
