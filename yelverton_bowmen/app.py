@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
+# source bin/activate
+# flask --debug run
+
 # CLUB PAGE
 from commitee import committee_members
 
