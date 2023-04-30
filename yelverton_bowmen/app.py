@@ -74,7 +74,6 @@ def bowtype_record(bowtype):
         case _:
             bowtype=barebow
     return render_template("bowtype_record.html",
-                           # subnav_bar = ["AFB", "Barebow", "Compound", "Longbow", "Recurve"],
                            bowtype=bowtype)
 
 
