@@ -2,10 +2,6 @@
 
 ---
 
-## Contents
-
----
-
 ## Overview
 
 I used Python's `Flask` module to create a dynamic website for Yelverton Bowmen. This website is only meant to be a prototype that I can use to develop my knowledge regarding Front-End Development for my position at the club as Webmaster.
